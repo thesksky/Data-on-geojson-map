@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_33a51003242bcb0fed34edde9cbb60a2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+             <h3 align="center" style="font-size:16px">
+             <b>Liepāja Districts - PII (Red) and Total Children (Blue)</b>
+             </h3>
+             
+    
+<div style="position: fixed; 
+            bottom: 50px; right: 50px; width: 150px; height: 90px; 
+            border:2px solid grey; z-index:9999; font-size:14px;
+            background-color:white;
+            padding: 10px;
+            border-radius: 5px;
+            ">
+    <p><i class="fa fa-circle" style="color:red"></i> PII</p>
+    <p><i class="fa fa-circle" style="color:blue"></i> Total Children</p>
+</div>
+    
+            <div class="folium-map" id="map_33a51003242bcb0fed34edde9cbb60a2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_33a51003242bcb0fed34edde9cbb60a2 = L.map(
+                "map_33a51003242bcb0fed34edde9cbb60a2",
+                {
+                    center: [56.505, 21.01],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_94b09f00b99afc60cb53dfbbcef3c31e = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_33a51003242bcb0fed34edde9cbb60a2);
+        
+    
+            var circle_marker_762f3c86af482f4ec4411029d3375691 = L.circleMarker(
+                [56.4912, 20.995],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.4, "stroke": true, "weight": 1}
+            ).addTo(map_33a51003242bcb0fed34edde9cbb60a2);
+        
+    
+        var popup_0507cc83693f8171845605c829b4af2a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ebdfa4a544da9bc9abba7184801d7a99 = $(`<div id="html_ebdfa4a544da9bc9abba7184801d7a99" style="width: 100.0%; height: 100.0%;">District: Dienvidrietumu<br>PII: 515<br>Total: 296</div>`)[0];
+                popup_0507cc83693f8171845605c829b4af2a.setContent(html_ebdfa4a544da9bc9abba7184801d7a99);
+            
+        
+
+        circle_marker_762f3c86af482f4ec4411029d3375691.bindPopup(popup_0507cc83693f8171845605c829b4af2a)
+        ;
+
+        
+    
+    
+            var circle_marker_a29abf4c4d658617d6a36731883423ce = L.circleMarker(
+                [56.4912, 20.995],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.875, "stroke": true, "weight": 1}
+            ).addTo(map_33a51003242bcb0fed34edde9cbb60a2);
+        
+    
+        var popup_7a1f13ef741dfa6b81ff81e3f35cb8a2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e6accf39ce67841e92cd3da57691d8ed = $(`<div id="html_e6accf39ce67841e92cd3da57691d8ed" style="width: 100.0%; height: 100.0%;">District: Dienvidrietumu<br>PII: 515<br>Total: 296</div>`)[0];
+                popup_7a1f13ef741dfa6b81ff81e3f35cb8a2.setContent(html_e6accf39ce67841e92cd3da57691d8ed);
+            
+        
+
+        circle_marker_a29abf4c4d658617d6a36731883423ce.bindPopup(popup_7a1f13ef741dfa6b81ff81e3f35cb8a2)
+        ;
+
+        
+    
+    
+            var circle_marker_96d1ee19527258a3ea2d1a32d788f9e5 = L.circleMarker(
+                [56.4832, 21.0185],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.675, "stroke": true, "weight": 1}
+            ).addTo(map_33a51003242bcb0fed34edde9cbb60a2);
+        
+    
+        var popup_e6833a70310aa5c3d0d7cf95223f90fc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_92655e54c2015ce9ebaa269d30e28aa5 = $(`<div id="html_92655e54c2015ce9ebaa269d30e28aa5" style="width: 100.0%; height: 100.0%;">District: Ezerkrasts<br>PII: 277<br>Total: 667</div>`)[0];
+                popup_e6833a70310aa5c3d0d7cf95223f90fc.setContent(html_92655e54c2015ce9ebaa269d30e28aa5);
+            
+        
+
+        circle_marker_96d1ee19527258a3ea2d1a32d788f9e5.bindPopup(popup_e6833a70310aa5c3d0d7cf95223f90fc)
+        ;
+
+        
+    
+    
+            var circle_marker_33ee46597ff97fcd8cacfd792007cfd7 = L.circleMarker(
+                [56.4832, 21.0185],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.925, "stroke": true, "weight": 1}
+            ).addTo(map_33a51003242bcb0fed34edde9cbb60a2);
+        
+    
+        var popup_207a940dca813c54f81ef38b1c26adb1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_65c7c47978a4a7fe6b362445b3db83d1 = $(`<div id="html_65c7c47978a4a7fe6b362445b3db83d1" style="width: 100.0%; height: 100.0%;">District: Ezerkrasts<br>PII: 277<br>Total: 667</div>`)[0];
+                popup_207a940dca813c54f81ef38b1c26adb1.setContent(html_65c7c47978a4a7fe6b362445b3db83d1);
+            
+        
+
+        circle_marker_33ee46597ff97fcd8cacfd792007cfd7.bindPopup(popup_207a940dca813c54f81ef38b1c26adb1)
+        ;
+
+        
+    
+    
+            var circle_marker_53c93d295fafdb0fd060488cc430771f = L.circleMarker(
+                [56.508, 21.005],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.9, "stroke": true, "weight": 1}
+            ).addTo(map_33a51003242bcb0fed34edde9cbb60a2);
+        
+    
+        var popup_093d6e24b6f4fde874b1a51b20206432 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b99afed77d0756885706818154c70e1c = $(`<div id="html_b99afed77d0756885706818154c70e1c" style="width: 100.0%; height: 100.0%;">District: Vecliepāja<br>PII: 1220<br>Total: 356</div>`)[0];
+                popup_093d6e24b6f4fde874b1a51b20206432.setContent(html_b99afed77d0756885706818154c70e1c);
+            
+        
+
+        circle_marker_53c93d295fafdb0fd060488cc430771f.bindPopup(popup_093d6e24b6f4fde874b1a51b20206432)
+        ;
+
+        
+    
+    
+            var circle_marker_aa9e54bcdb7a1cf78a52f62e051696f6 = L.circleMarker(
+                [56.508, 21.005],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.5, "stroke": true, "weight": 1}
+            ).addTo(map_33a51003242bcb0fed34edde9cbb60a2);
+        
+    
+        var popup_3d88d9eb9f9e4c7b95515f6fb730001d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f68311a05703e41b9315a8545757b68 = $(`<div id="html_3f68311a05703e41b9315a8545757b68" style="width: 100.0%; height: 100.0%;">District: Vecliepāja<br>PII: 1220<br>Total: 356</div>`)[0];
+                popup_3d88d9eb9f9e4c7b95515f6fb730001d.setContent(html_3f68311a05703e41b9315a8545757b68);
+            
+        
+
+        circle_marker_aa9e54bcdb7a1cf78a52f62e051696f6.bindPopup(popup_3d88d9eb9f9e4c7b95515f6fb730001d)
+        ;
+
+        
+    
+    
+            var circle_marker_a5150ca432820da0126577875494cdc9 = L.circleMarker(
+                [56.5204, 21.0131],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.025, "stroke": true, "weight": 1}
+            ).addTo(map_33a51003242bcb0fed34edde9cbb60a2);
+        
+    
+        var popup_c3ff4886a85b09b9cc974a7da75b9939 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1c02dc4fc19d30c6afbcde86640af75d = $(`<div id="html_1c02dc4fc19d30c6afbcde86640af75d" style="width: 100.0%; height: 100.0%;">District: Jaunliepāja<br>PII: 0<br>Total: 361</div>`)[0];
+                popup_c3ff4886a85b09b9cc974a7da75b9939.setContent(html_1c02dc4fc19d30c6afbcde86640af75d);
+            
+        
+
+        circle_marker_a5150ca432820da0126577875494cdc9.bindPopup(popup_c3ff4886a85b09b9cc974a7da75b9939)
+        ;
+
+        
+    
+    
+            var circle_marker_c6ee674eee6aa3ce061b7f8c4901c663 = L.circleMarker(
+                [56.53516, 21.02246],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.5, "stroke": true, "weight": 1}
+            ).addTo(map_33a51003242bcb0fed34edde9cbb60a2);
+        
+    
+        var popup_9115d88603e0e89fb99b6aae6f08f30f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c85f128d845d9d1179e8ad8bc6360dbe = $(`<div id="html_c85f128d845d9d1179e8ad8bc6360dbe" style="width: 100.0%; height: 100.0%;">District: Ziemeļu priekšpilsēta<br>PII: 1180<br>Total: 780</div>`)[0];
+                popup_9115d88603e0e89fb99b6aae6f08f30f.setContent(html_c85f128d845d9d1179e8ad8bc6360dbe);
+            
+        
+
+        circle_marker_c6ee674eee6aa3ce061b7f8c4901c663.bindPopup(popup_9115d88603e0e89fb99b6aae6f08f30f)
+        ;
+
+        
+    
+    
+            var circle_marker_a989b85958709c11f467e1e034f78108 = L.circleMarker(
+                [56.53516, 21.02246],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.5, "stroke": true, "weight": 1}
+            ).addTo(map_33a51003242bcb0fed34edde9cbb60a2);
+        
+    
+        var popup_c414b666a35c9f998306d95b9be86f86 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_286eea8f66c35a74fb5a774840113850 = $(`<div id="html_286eea8f66c35a74fb5a774840113850" style="width: 100.0%; height: 100.0%;">District: Ziemeļu priekšpilsēta<br>PII: 1180<br>Total: 780</div>`)[0];
+                popup_c414b666a35c9f998306d95b9be86f86.setContent(html_286eea8f66c35a74fb5a774840113850);
+            
+        
+
+        circle_marker_a989b85958709c11f467e1e034f78108.bindPopup(popup_c414b666a35c9f998306d95b9be86f86)
+        ;
+
+        
+    
+    
+            var circle_marker_19396875aa3eb13be34c99c0e8bfd976 = L.circleMarker(
+                [56.55, 21.0056],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.2, "stroke": true, "weight": 1}
+            ).addTo(map_33a51003242bcb0fed34edde9cbb60a2);
+        
+    
+        var popup_7382eabcc3cef711fd96646c01c16609 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c9d3a53ec50b46c6d23f58eb62a4af6d = $(`<div id="html_c9d3a53ec50b46c6d23f58eb62a4af6d" style="width: 100.0%; height: 100.0%;">District: Karosta<br>PII: 151<br>Total: 448</div>`)[0];
+                popup_7382eabcc3cef711fd96646c01c16609.setContent(html_c9d3a53ec50b46c6d23f58eb62a4af6d);
+            
+        
+
+        circle_marker_19396875aa3eb13be34c99c0e8bfd976.bindPopup(popup_7382eabcc3cef711fd96646c01c16609)
+        ;
+
+        
+    
+    
+            var circle_marker_3c7dd5709531b4159d76d91baabb94da = L.circleMarker(
+                [56.55, 21.0056],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.775, "stroke": true, "weight": 1}
+            ).addTo(map_33a51003242bcb0fed34edde9cbb60a2);
+        
+    
+        var popup_7aa3d5606150fd9e6a65342259c10e7a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7df1ab7bcb7cc469f3b9162cdf7d20b3 = $(`<div id="html_7df1ab7bcb7cc469f3b9162cdf7d20b3" style="width: 100.0%; height: 100.0%;">District: Karosta<br>PII: 151<br>Total: 448</div>`)[0];
+                popup_7aa3d5606150fd9e6a65342259c10e7a.setContent(html_7df1ab7bcb7cc469f3b9162cdf7d20b3);
+            
+        
+
+        circle_marker_3c7dd5709531b4159d76d91baabb94da.bindPopup(popup_7aa3d5606150fd9e6a65342259c10e7a)
+        ;
+
+        
+    
+    
+            var circle_marker_605b5ead04bd04420a7b64c810a3cefc = L.circleMarker(
+                [56.55, 21.0451],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.2, "stroke": true, "weight": 1}
+            ).addTo(map_33a51003242bcb0fed34edde9cbb60a2);
+        
+    
+        var popup_5064482ab8e99adc6d1bf1f23807a488 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_adbf98f88159d38a1c37b555f8e2feed = $(`<div id="html_adbf98f88159d38a1c37b555f8e2feed" style="width: 100.0%; height: 100.0%;">District: Tosmare<br>PII: 0<br>Total: 208</div>`)[0];
+                popup_5064482ab8e99adc6d1bf1f23807a488.setContent(html_adbf98f88159d38a1c37b555f8e2feed);
+            
+        
+
+        circle_marker_605b5ead04bd04420a7b64c810a3cefc.bindPopup(popup_5064482ab8e99adc6d1bf1f23807a488)
+        ;
+
+        
+    
+    
+            var circle_marker_3a153444faa2f388ad416591b8624128 = L.circleMarker(
+                [56.5494, 21.082],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.0, "stroke": true, "weight": 1}
+            ).addTo(map_33a51003242bcb0fed34edde9cbb60a2);
+        
+    
+        var popup_2fb8540f5d1b253ee7f2790752a9a671 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_96a944251367931887ee41bd4a4df66a = $(`<div id="html_96a944251367931887ee41bd4a4df66a" style="width: 100.0%; height: 100.0%;">District: Zaļā birze<br>PII: 200<br>Total: 280</div>`)[0];
+                popup_2fb8540f5d1b253ee7f2790752a9a671.setContent(html_96a944251367931887ee41bd4a4df66a);
+            
+        
+
+        circle_marker_3a153444faa2f388ad416591b8624128.bindPopup(popup_2fb8540f5d1b253ee7f2790752a9a671)
+        ;
+
+        
+    
+    
+            var circle_marker_a4f307be504a0d723374733f9bbbefa8 = L.circleMarker(
+                [56.5494, 21.082],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_33a51003242bcb0fed34edde9cbb60a2);
+        
+    
+        var popup_ccd6f613ee7a9d044bdbddec63e889bb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c6cc31a0a588d2f6c44089c3fa52aeef = $(`<div id="html_c6cc31a0a588d2f6c44089c3fa52aeef" style="width: 100.0%; height: 100.0%;">District: Zaļā birze<br>PII: 200<br>Total: 280</div>`)[0];
+                popup_ccd6f613ee7a9d044bdbddec63e889bb.setContent(html_c6cc31a0a588d2f6c44089c3fa52aeef);
+            
+        
+
+        circle_marker_a4f307be504a0d723374733f9bbbefa8.bindPopup(popup_ccd6f613ee7a9d044bdbddec63e889bb)
+        ;
+
+        
+    
+</script>
+</html>
